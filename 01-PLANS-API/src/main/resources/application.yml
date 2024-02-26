@@ -1,0 +1,23 @@
+server:
+  port: 9090
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    password: abcit
+    url: jdbc:h2:mem:testdb
+    username: abcit
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    
+plan-api:
+  messages:
+    planSaveSucc: Plan Saved Succesfully
+    planSaveFail: Plan Save Failed
+    planUpdateSucc: Plan Updated Successfully
+    planUpdateFail: Plan Update Failed
+    planDeleteSucc: Plan Deleted Successfully
+    planDeleteFail: Plan Delete Failed
+    planStatusChange: Plan Status Changed Successfully
+    planStatusChangeFail: Plan Status Change Failed
