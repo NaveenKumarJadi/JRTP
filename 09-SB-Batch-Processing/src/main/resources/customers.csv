@@ -1,0 +1,5 @@
+﻿id,firstName,lastName,email,gender,contactNo,country,dob
+1,Navin,Jadi,nj@gmail.com,Male,7799562271,India,01-11-1997
+2,Jyothi,Konduru,jk@gmail.com,Female,7799562272,Us,22-03-1999
+3,Monksha,Konduru,mk@gmail.com,Female,7799562273,Canada,23-03-1999
+4,Leo,orange,lo@gmail.com,Female,7799562274,china,24-03-1999

@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    password: nAvi@7799
+    url: jdbc:mysql://localhost:3306/batchdemo
+    username: root
+    hikari:
+      maximum-pool-size: 20
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  batch:
+    jdbc:
+      initialize-schema: ALWAYS
+#  application:
+#    name: 09-SB-Batch-Processing

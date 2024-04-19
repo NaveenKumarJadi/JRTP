@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    username: root
+    password: nAvi@7799
+    url: jdbc:mysql://localhost:3306/jrtp
+    driver: com.mysql.cj.jdbc.driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
