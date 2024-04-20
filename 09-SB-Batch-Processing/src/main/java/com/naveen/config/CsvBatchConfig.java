@@ -28,11 +28,9 @@ public class CsvBatchConfig {
 	@Autowired
 	private CustomerRepository customerRepository;
 	
-	@SuppressWarnings("removal")
 	@Autowired
 	private StepBuilderFactory stepBuilderFactory;
 	
-	@SuppressWarnings("removal")
 	@Autowired
 	private JobBuilderFactory jobBuilderFactory;
 	
@@ -92,13 +90,18 @@ public class CsvBatchConfig {
 	public Step step() {
 		return stepBuilderFactory.get("step-1").<Customer, Customer>chunk(10)
 				.reader(customerReader())
-				.processor(customerProcessor()).writer(customerWriter()).build();
+				.processor(customerProcessor())
+				.writer(customerWriter())
+				.build();
 	}
 	
 	//create Job
 	@Bean
 	public Job job() {
-		return jobBuilderFactory.get("customers-job").flow(step()).end().build();
+		return jobBuilderFactory.get("customers-job")
+								.flow(step())
+								.end()
+								.build();
 	}
 	
 	

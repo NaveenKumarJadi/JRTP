@@ -13,17 +13,17 @@ public class CustomerRestController {
 
 	@Autowired
 	private JobLauncher jobLauncher;
-	
+
 	@Autowired
 	private Job job;
-	
+
 	@GetMapping("/customers")
 	public void loadCsvToDb() throws Exception {
-		
+
 		JobParameters jobParams = new JobParametersBuilder().addLong("Start-At", System.currentTimeMillis())
 				.toJobParameters();
-		
+
 		jobLauncher.run(job, jobParams);
-		
+
 	}
 }
