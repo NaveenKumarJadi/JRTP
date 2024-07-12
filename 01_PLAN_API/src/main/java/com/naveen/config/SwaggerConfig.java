@@ -11,7 +11,7 @@ public class SwaggerConfig {
 	public OpenAPI customOpenAPI(String appDescription, String appVersion) {
 		
 		return new OpenAPI()
-				.info(new io.swagger.v3.oas.models.info.Info().title("IIEX IAA API")
+				.info(new io.swagger.v3.oas.models.info.Info().title("IIND API")
 				.description("1.0.0")
 				.termsOfService("appDescription"))
 				.addServersItem(new Server().url("http://localhost:9077/eligibility/{caseNum}"));
